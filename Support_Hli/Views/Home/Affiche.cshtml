@@ -1,0 +1,191 @@
+﻿
+
+@section Menu {
+    @Scripts.Render("~/Scripts/Tables/Data/menu")
+}
+
+@Styles.Render("~/AdminLTE/plugins/datatables/css")
+
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">Recherche avancée</h3>
+        <div class="box-tools pull-right">
+            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
+        </div>
+    </div>
+    <div class="box-body">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>Date début</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Creé par</label>
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Creé par</option>
+                        <option>HLI</option>
+                        <option>California</option>
+                        <option>Delaware</option>
+                        <option>Tennessee</option>
+                        <option>Texas</option>
+                        <option>Washington</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>Date fin</label>
+                    <div class="input-group">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Réouverte</label>
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Oui</option>
+                        <option>Non</option>
+
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>Client</label>
+                    <input type="text" value="" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label>Reporté</label>
+                    <select class="form-control select2" style="width: 100%;">
+
+                        <option selected="selected">Oui</option>
+                        <option>Non</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>Raison de statut</label>
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Alabama</option>
+                        <option>Alaska</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Type</label>
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Alabama</option>
+                        <option>Alaska</option>
+                        <option>California</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>Projets</label>
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Alabama</option>
+                        <option>Alaska</option>
+
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Priorités</label>
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Alabama</option>
+                        <option>Alaska</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                    <label>Statuts</label>
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">Alabama</option>
+                        <option>Alaska</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Concerne</label>
+                    <select class="form-control select2" style="width: 100%;">
+                        <option selected="selected">CRM</option>
+                        <option>Autres</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group">
+                </div>
+                <div class="form-group">
+
+                    <input type="reset" value="Annuler" style="margin-left:1200px" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+
+        <div class="box">
+            <div class="box-header">
+                <input type="submit" value="Ajouter Demande" />
+                <input type="submit" value="Exporter" />
+                <input type="reset" value="Annuler" style="margin-top:40px;margin-left:920px" />
+                <div class="form-group" style="margin-left:1200px">
+                    <select class="form-control " style="width: 100%; margin-top:-30px">
+                        <option selected="selected">10</option>
+                        <option>Autres</option>
+                    </select>
+                </div>
+            </div>
+            <div class="box-body">
+
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Date de création</th>
+                            <th>Numéro</th>
+                            <th>Titres</th>
+                            <th>Clients</th>
+                            <th>Crée par</th>
+                            <th>Projets</th>
+                            <th>Types</th>
+                            <th>Status</th>
+                            <th>Raison de statut</th>
+                            <th>Priorités</th>
+                            <th>Nombre réouverture</th>
+                            <th>Nombre report</th>
+                            <th>Dernier commentaire</th>
+                            <th>Date limite</th>
+                            <th>Date critique</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/AdminLTE/plugins/datatables/js")
+    @Scripts.Render("~/Scripts/Tables/Data")
+}
+
